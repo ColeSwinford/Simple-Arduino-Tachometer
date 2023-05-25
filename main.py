@@ -7,7 +7,8 @@ graph_data = open('data_{}.txt'.format(time.strftime("%m.%d.%Y-%H.%M.%S")), 'w+'
 graph_data.write('Format: rpm, time(seconds)\n\n')
 
 #### Arduino Data ####
-arduinoData = serial.Serial('com3', 115200)
+comPort = input("Enter COM port (Ex. com3): ")
+arduinoData = serial.Serial(comPort, 115200)
 while True:
     ### Receive data from Arduino ###
     while arduinoData.inWaiting() == 0: # do nothing while there's no data
