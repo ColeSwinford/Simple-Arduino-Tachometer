@@ -9,3 +9,6 @@ Simple Arduino tachometer and Python script that saves data in a .txt file. This
 ## Python
 - Creates a .txt file in the format data_month.day.year-hour.minute,second.txt (Note: hour is in 24 hour format, so 0-24)
 - Writes data to the .txt file, continuously saving it
+- Automatically selects the com port if there is only one detected
+- Warns user that there are no ports detected and gives the option to scan again for ports
+- Gives user option to select port if there are multiple detected
